@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<head>
+    <h1> Recette Carbonara</h1>
+</head>
+
+<p1>
+    <script>
+
+
+        let array = ["Pâtes", "Oeuf", "Sel", "Poivre", "Lardon", "Oignon", "Parmesan"]
+
+        let nombreIngredients = array.length
+
+        let message = "Il y a" + " " + nombreIngredients + " " + "ingrédients dans la recette."
+
+        document.querySelector('p1').innerHTML = message
+
+    </script>
+
+</p1>
+
+<br>
+
+<br>
+
+<p2>
+
+    <script>
+
+
+
+        let message2 = "Les ingrédients pour la recette des pâtes Carbonara sont les suivants" + " " + ":"
+
+        document.querySelector('p2').innerHTML = message2
+    </script>
+</p2>
+
+<br>
+
+<p3>
+    <ol id="listeIngrédients"></ol>
+    <script>
+        let data = ["Pâtes", "Oeuf", "Sel", "Poivre", "Lardon", "Oignon", "Parmesan"]
+        
+        let list = document.getElementById("listeIngrédients");
+        for (i = 0; i < data.length; i++) {
+            let li = document.createElement('li');
+            li.innerText = data[i];
+            list.appendChild(li);
+        }
+        let alphabet = data.sort()
+
+
+
+
+
+
+    </script>
+
+</p3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

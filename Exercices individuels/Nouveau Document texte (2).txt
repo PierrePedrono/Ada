@@ -1,0 +1,16 @@
+- demande un nombre
+- 45
+- plus grand
+- demande un nombre
+- 44
+- demande un nombre
+- plante
+
+
+-fonction gameplay
+-fonction demande un nombre
+- si fonction demande = vrai
+stop
+
+si nombre !=22
+demande un nombre

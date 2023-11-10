@@ -1,0 +1,54 @@
+- Qu'est-ce qu'Internet ? Qu'est-ce que le Web ? Quelles différences entre les deux ?
+Internet = ensemble des réseaux locaux connectés entre eux : wan (wild area network) qui permettent de transporter les informations
+Web = réseau d'informations
+
+- Qu'est-ce qu'un protocole réseau ?
+Une méthode convenue ou normalisée pour transmettre des données et/ou établir des communications entre différents dispositifs
+
+
+- Adresse MAC :
+Adresse physique d’un périphérique réseau
+
+
+
+- Adresse IP (Internet Protocol) :
+Une adresse IP permet d’identifier votre appareil de connexion sur internet. Toutefois, elle est amenée à changer. Si vous utilisez le même appareil pour vous connecter à internet depuis un autre endroit, votre adresse IP ne sera plus la même car l’adresse IP dépend du réseau utilisé. Elle permet d’identifier une machine connectée à internet.
+
+
+- Qu'est-ce qu'un broadcast ?
+Méthode de transmission de donnée à partir d'une seule source vers plusieurs sources. Méthode de transmission à l'ensemble des machines d'un réseau.
+
+- À quoi sert le DHCP ?
+Transmettre la configuration IP à un hôte. protocole qui permet à un ordinateur qui se connecte sur un réseau local d’obtenir dynamiquement et automatiquement sa configuration IP.
+
+
+
+- À quoi servent un répéteur (hub) ? un commutateur (switch) ? un routeur (router) ?
+Commutateur = prise multiple réseau, pas intelligent, ne trie rien (switch)
+Routeur = connecter deux réseaux locaux différents, connecte à l'extérieur via une adresse IP, fait le tri entre ce qui doit sortir et rester, et tri ce qui doit entrer = connecte les réseaux au lieu des deux autres qui les créent.
+Répéteur = (hub) : via ethernet, prend les adresses physiques (MAC), ne les envoie qu'à un seul port
+
+
+
+- Différences UDP - TCP (deux protocoles de transmission de données)
+TCP = protocole basé sur la connexion, plus fiable => plus lent ; vérifie si les données sont bien reçues, peut séquencer les données, contrôle des erreurs approfondi, pas de WiFi possible, retranmission des données possibles ; idéal email/sms + transfert fichiers + navigation web
+UDP = sans connexion, moins fiable => plus rapide, contrôle limité des erreurs, pas de retransmission ni de vérification donc perte possible, WiFi possible ; idéal pour jeux vidéos, streaming, chat vidéo
+
+
+- À quoi sert un DNS (Domain Name Server) ?
+Permet la correspondance entre un nom de domaine ou nom d’hôte et l’adresse IP (et inversement).
+Donne une adresse IP à un serveur pour transiter sur le réseau.
+
+
+- `HTTP`, différences `HTTP` - `HTTPS`
+HTTP = protocole de communication des serveurs WEB ; ensemble de méthodes de requête qui indiquent l'action que l'on souhaite réaliser sur la ressource indiquée
+HTTPS = La différence réside dans le fait que le HTTPS utilise un protocole de transport particulier, à savoir SSL/TLS. Ce n’est pas le protocole lui-même, mais son mode de transport qui est sécurisé de manière supplémentaire
+
+
+
+- Qu'est-ce qu'une `URL` ? Expliquez l'`URL` suivante : [`https://www.google.com/search?q=what's+a+url`](https://www.google.com/search?q=what%27s+a+url)
+URL = adresse web, est une chaîne de caractères uniforme qui permet d'identifier une ressource du World Wide Web par son emplacement et de préciser le protocole internet pour la récupérer
+EXPLI : protocole + nom de domaine + chemin + requête
+
+- Citez quelques méthodes `HTTP`
+Get, Head (demande réponse sans corps de page), Post, Connect

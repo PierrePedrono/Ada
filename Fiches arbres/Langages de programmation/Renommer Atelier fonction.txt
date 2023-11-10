@@ -1,0 +1,37 @@
+//la fonction retourne true si le nombre est pair
+//false si le nombre est impair
+
+
+
+function isPair(number) {
+//Si le nombre est pair
+// Renvoyer la valeur true
+//=== compare la valeur et son type 
+if (number % 2 === 0){
+  return true}
+ //true = résultat de booléen donc un mot clé donc pas de "", l'oridnateur le reconnait.
+  return false
+}
+
+let a = 5
+
+let phrase = 'Mon nombre est '+ a
+
+//le ${} sert à sortir une variable d'un chaîne de caractères
+
+//"" = chaine de caractère
+//'' = différents types
+
+
+console.log(phrase)
+console.log(isPair(5))
+
+if (isPair(a) == true){
+ console.log(phrase + " est pair")
+}
+
+else{
+  console.log(phrase + " est impair")
+}
+
+//code générique : marche pour toutes les valeurs de "a"

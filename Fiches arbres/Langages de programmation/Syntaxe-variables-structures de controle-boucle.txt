@@ -1,0 +1,22 @@
+Types de variables :
+
+
+-Bool : vrai/faux (différents langages)
+
+-String : chaîne de caractères (différents langage mais pas C)
+
+-Int : nombres entiers (langage C et ses dérivés) : définir un nombre entier pour faciliter les calculs du processeur
+
+-Char : caractères (C et ses dérivés)
+
+-Float/Double : nombres réels (langage C et ses dérivés) : définir un nombre entier pour faciliter les calculs du processeur
+
+-Déclarer : indiquer les éléments que l'on va pouvoir réutiliser par la suite (variables), il y a plusieurs manières de les indiquer/définir.Es JS : let (si pas const) et const (si valeur et le type ne changent pas), on peut mixer les deux. Var n'est quasi plus utilisé. 
+
+-Assigner : donner une valeur à une variable
+
+-Conditions : éléments qui modifient le comportement d'une partie du code en déterminant si il s'exécute ou non.
+
+-Comparer : examiner les rapports entre deux valeurs : ressemblance, différence...
+
+-Boucle : répéter des actions simplement et rapidement

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+
+<body>
+    <script>
+
+        function askName() {
+            name = prompt('Quel est ton nom ?')
+
+
+            let présentation = '👋 Bonjour ' + name
+
+            console.log(présentation)
+
+            document.body.innerHTML += '<h1>' + présentation + '</h1>'
+        }
+
+        function askBirthYear() {
+            birthYear = prompt('Quelle est ton année de naissance ?', 'AAAA')
+            monthYear = prompt('Quel est ton mois de naissance ?' , 'MM')
+
+            let currentYear = new Date().getFullYear();
+            let currentMonth = new Date().getMonth()
+
+            if (currentMonth >= monthYear) {
+                âge = currentYear - birthYear;
+                
+            }
+
+            else {
+                âge = currentYear - birthYear - 1;
+                
+            }
+            
+
+            console.log(âge)
+
+            document.body.innerHTML += '<h2>' + 'Vous avez ' + âge + ' ans.' + '</h2>'
+        }
+
+        askName()
+
+        askBirthYear()
+
+    </script>
+
+</body>
+
+</html>

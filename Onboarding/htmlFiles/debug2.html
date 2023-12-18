@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<body>
+
+  <h1>Print some arrays</h1>
+
+  <p id="arrays"></p>
+
+  <script>
+
+    // Show array content index by index
+    function showArray(array) {
+      for (var i = 1; i < array.length; i++) {
+        console.log(array[i]);
+        // Add array's index element to the html file
+        document.getElementById('arrays').innerText += array[i] 
+        document.getElementById('arrays').innerText += "\n"
+      }
+      document.getElementById('arrays').innerText += "\n------------------\n"
+    }
+
+    showArray("abcef");
+    showArray(["abcdef", "ghijkl", "mnop"]);
+    showArray([1, 2, 3, 4, 5]);
+
+  </script>
+</body>

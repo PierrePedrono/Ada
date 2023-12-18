@@ -1,0 +1,62 @@
+- Signature :
+En programmation informatique, la signature de type définit les types de données acceptables pour une fonction ou une méthode. Une signature inclut au moins le nom de la fonction et le nombre de paramètres. Dans certains langages, elle peut aussi spécifier le type de la valeur de retour et les types de ses paramètres. (en js : est constituée du nom de la méthode, du nombre et du type de ses paramètres, et du type qu'elle renvoie.)
+En Java, les signatures servent à identifier les méthodes et les classes. 
+Méthode : actions (fonctions) qui peuvent interragir sur des objets. Une fonction étant une propriété d'un objet
+
+En d'autres termes, si ce qui se trouve devant le point est le nom d'une classe, alors il s'agit d'un appel à une méthode de classe (méthode statique). En revanche, si ce qui se trouve devant le point est une expression (souvent une variable), alors il s'agit d'un appel à une méthode d'instance
+Classe : La classe décrit l'objet physiquement (aspect) avec des variables et ce qu'il peut faire (comportement) avec des fonctions
+
+
+public static void main(String[] args)
+
+
+
+- Déclaration :
+Une définition de fonction (aussi appelée déclaration de fonction ou instruction de fonction) est construite avec le mot-clé function, suivi par :
+
+    Le nom de la fonction.
+    Une liste d'arguments à passer à la fonction, entre parenthèses et séparés par des virgules.
+    Les instructions JavaScript définissant la fonction, entre accolades, { }.
+
+
+- Paramètres :
+Les paramètres d'une fonction sont les noms listés dans la définition de la fonction. 
+Les paramètres sont initialisés avec les valeurs des arguments fournis.
+	
+
+- Arguments :
+Les arguments d'une fonction sont les valeurs réelles passées à la fonction.
+
+
+- Récursivité :
+Une fonction peut faire référence à elle-même et s'appeler elle-même. Il existe trois moyens pour qu'une fonction fasse référence à elle-même :
+
+    Le nom de la fonction
+    arguments.callee
+    Une variable de la portée qui fait référence à la fonction
+Quand une fonction s’appelle elle-même jusqu’à atteindre une condition d’arrêt. Elle arrête alors de s’appeler elle-même. Le résultat de chaque fonction enfant est retourné dans les fonctions parent, jusqu’à retourner à la fonction originale. 
+
+
+
+
+- Pile d’appel :
+Une stack (pile) est une liste d’éléments qui ne peut être manipulée qu’en ajoutant ou enlevant le sommet de la liste. 
+LIFO (Last In First Out)
+Ce fonctionnement est géré via une interface avec quatre opérations principales.
+
+    Push : ajouter un nouvel élément au sommet de la stack
+    Pop : enlever l’élément au sommet de la stack
+    Top : retourner l’élément au sommet de la stack
+    IsEmpty : retourner true si la stack est vide
+
+
+
+- Fonctions anonymes : fonctions sans nom. Arguments d'une autre fonction ou Fonctions appellées directement.
+
+
+
+- Fonctions fléchées :
+Les fonctions fléchées sont des fonctions qui possèdent une syntaxe très compacte, ce qui les rend très rapide à écrire. Les fonctions fléchées utilisent le signe => qui leur a donné leur nom à cause de sa forme de flèche. 
+Fonctions qui ont été faites pour être déclarées sur une seule et unique ligne. Pas d'accolades, => correspond au return
+let double = n => n * 2;
+Pas besoin d'argument pour fonctionner si fonctio n'en a besoin que d'un. 

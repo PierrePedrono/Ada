@@ -1,0 +1,132 @@
+    <!DOCTYPE html>
+
+    <body>
+
+
+        <!-- Le code ci-dessous affiche un champ à remplir de type numérique, 
+    qui lorsqu'il est saisi et validé par le biais d'un bouton, exécute la fonction gamePlay. -->
+
+        <h1>Joueur 2:</h1>
+        <br>
+        <br>
+        <p1>Devine le nombre donné par le joueur 1 : </p1>
+        <br>
+        <br>
+
+        <p2 id="rangeInf"> 0 < </p2>
+
+                <p3><input type="number" placeholder="?" min="0" max="50" id="guessNumber" /> </p3>
+
+                <p4 id="rangeSup">
+                    < 50 </p4>
+
+
+                        <br>
+                        <br>
+                        <input id="Ok" type="submit" value="Valider" onclick="return gamePlay()">
+                        <br>
+
+
+                        <script>
+                            //Créée une variable giveNumber qui doit être un nombre compris entre 0 et 50. 
+                            //Ce nombre est donné par le joueur 1 dans un prompt.
+                            //Tant que le nombre n'est pas compris entre 0 et 50, le prompt s'affiche à nouveau.
+
+                            document.getElementById('rangeInf').value = 0
+                            document.getElementById('rangeSup').value = 50
+                            function giveNumber() {
+                                let bool = false;
+                                while (bool == false) {
+                                    givenNumber = prompt("Joueur 1", "Donne-moi un nombre entre 0 et 50");
+                                    if (givenNumber > 0 && givenNumber < 50) {
+                                        bool = true;
+                                    }
+                                }
+                                return givenNumber
+
+                            }
+
+
+
+                            //Compare le nombre donné par le joueur 1 et le nombre donné par le joueur 2
+                            //Remplace la range inférieure seulement si le nombre donné par le J2 est supérieur
+                            //Remplace la range supérieure seulement si le nombre donné par le J2 est inférieur
+                            function didIWin() {
+                                if (document.getElementById("guessNumber").value < givenNumber ) {
+                                    result = false;
+
+
+                                    //Regarde si le résultat donné par le J2 est supérieur à la range mini
+                                    if (document.getElementById("guessNumber").value > document.getElementById("rangeInf").value) {
+                                        //Indique que le nombre recherché est plus grand dans une alerte
+                                        alert("Le résultat recherché est un nombre plus grand")
+                                        //Remplace la valeur de la range mini par le nombre donné par le J2
+                                        document.getElementById("rangeInf").value = document.getElementById("guessNumber").value
+                                        //Remplace dans le html la valeur de la range mini par le nombre donné par le J2
+                                        document.getElementById("rangeInf").innerHTML = document.getElementById("guessNumber").value + "< "
+                                    }
+
+                                    else if (guessNumber = document.getElementById("rangeInf").value) {
+                                        alert("Le nombre a déjà été proposé")
+                                        document.getElementById("guessNumber").value = ""
+                                        document.getElementById("guessNumber").reset()
+                                    }
+                                    //Remet à zéro le champ de proposition du J2
+                                    else {
+                                        alert("Le nombre proposé n'est pas dans l'intervalle donné")
+                                        document.getElementById("guessNumber").value = ""
+                                        document.getElementById("guessNumber").reset()
+
+                                    }
+                                }
+
+                                //le nombre recherché est égal => vous avez déjà donné ce nombre
+                                //le nombre recherché n'est pas dans la range => le nombre donné n'est pas dans l'intervalle
+                                //le nombre donné est dans la range => on remplace les bornes par le nombre donné
+
+                                else if (document.getElementById("guessNumber").value > givenNumber) {
+                                    result = false;
+                                    alert("Le résultat recherché est un nombre plus petit")
+                                    if (document.getElementById("guessNumber").value < document.getElementById("rangeSup").value) {
+                                        document.getElementById("rangeSup").value = document.getElementById("guessNumber").value
+                                        document.getElementById("rangeSup").innerHTML = " < " + document.getElementById("guessNumber").value
+                                    }
+                                    else {
+
+                                        document.getElementById("guessNumber").value = ""
+                                        document.getElementById("guessNumber").reset()
+                                    }
+                                }
+
+
+                                else {
+                                    result = true
+                                    alert("Bravo ! Vous avez deviné le bon nombre")
+
+
+                                }
+                                return result
+                            }
+
+
+
+                            //Demande au J2 de refaire une tentative si le nombre donné ne correspond pas au nombre donné par le J1
+
+                            function gamePlay() {
+                                do didIWin()
+                                while (result == false)
+                            }
+
+
+                            giveNumber()
+
+                            document.getElementById("guessNumber").addEventListener("keydown", function (event) {
+                                if (event.keyCode === 13) {
+                                    event.preventDefault();
+                                    document.getElementById("Ok").click();
+                                }
+                            })
+
+                        </script>
+
+    </body>

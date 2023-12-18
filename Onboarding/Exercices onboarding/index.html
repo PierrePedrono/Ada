@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Basic for loop example</title>
+  </head>
+  <body>
+  <p></p>
+  <script>
+    let info = 'My cats are called ';
+    let para = document.querySelector('p');
+    const cats = ['bill', 'jeff', 'pete', 'biggles', 'jasmin'];
+    
+    for(let i= 0; i < cats.length; i++) {
+      let catName = cats[i]
+      if (catName.length == 4) {
+        info += catName + ' ';
+        console.log(info)
+      }
+    };
+
+    para.textContent = info;
+    </script>
+  </body>
+</html>
